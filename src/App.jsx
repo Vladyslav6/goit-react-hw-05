@@ -14,7 +14,6 @@ function App() {
           <Route path="/moviespage" element={<MoviesPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        <p>Start hw</p>
       </div>
     </>
   );
