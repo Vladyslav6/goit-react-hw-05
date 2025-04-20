@@ -4,7 +4,7 @@ import { fetchTmdbById } from "../../services/api";
 
 const MovieDetailsPage = () => {
   const { moviesId } = useParams();
-  const [movies, setMovies] = useState({});
+  const [movies, setMovies] = useState([]);
   useEffect(() => {
     const getData = async () => {
       try {

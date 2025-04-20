@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchCastById } from "../../services/api";
 
 const MovieCast = () => {
   const { moviesId } = useParams();
 
-  const [cast, setCast] = useState({});
+  const [cast, setCast] = useState([]);
   useEffect(() => {
     const getData = async () => {
       try {
@@ -17,16 +17,18 @@ const MovieCast = () => {
     };
     getData();
   }, [moviesId]);
-  console.log(cast)
-  
+  console.log(cast);
+
   return (
     <div>
-  
-      {cast.map((item)=>(
-        <li>{item.name}</li>
-        
-      ))}
-    
+      {/* {cast.map((item) => (
+        <p>{item.name}</p>
+      ))} */}
+      <ul>
+        {cast.map((item) => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };
