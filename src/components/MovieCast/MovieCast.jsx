@@ -17,17 +17,25 @@ const MovieCast = () => {
     };
     getData();
   }, [moviesId]);
+  console.log(cast)
+  
   return (
     <div>
-      MovieCast
-      {/* <p>{console.log(cast)}</p> */}
-      <ul>
-        {cast.map((item) => {
-          <li key={item.id}>{item.name}</li>;
-        })}
-      </ul>
+  
+      {cast.map((item)=>(
+        <li>{item.name}</li>
+        
+      ))}
+    
     </div>
   );
 };
 
 export default MovieCast;
+{/* <ul className={css.cards}>
+{sendPhoto.map((item) => (
+  <li key={item.id}>
+    <ImageCard sendItem={item} handleClick={handleClick} />
+  </li>
+))}
+</ul> */}
