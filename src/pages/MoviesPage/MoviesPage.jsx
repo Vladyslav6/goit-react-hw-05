@@ -1,4 +1,11 @@
+import MovieSearchList from "../../components/MovieSearchList/MovieSearchList";
+import MovieDetailsPage from "../MovieDetailsPage/MovieDetailsPage";
+
 const MoviesPage = () => {
-  return <h2>Movie</h2>;
+  return (
+    <div>
+      <MovieSearchList />
+    </div>
+  );
 };
 export default MoviesPage;

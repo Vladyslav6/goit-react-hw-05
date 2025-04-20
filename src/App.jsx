@@ -3,6 +3,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import MoviesPage from "./pages/MoviesPage/MoviesPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Headers from "./components/Headers/Headers";
+import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
+import MovieCast from "./components/MovieCast/MovieCast";
+import MovieReviews from "./components/MovieReviews/MovieReviews";
 
 function App() {
   return (
@@ -11,7 +14,12 @@ function App() {
         <Headers />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/moviespage" element={<MoviesPage />} />
+
+          <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:moviesId" element={<MovieDetailsPage />}>
+            <Route path="moviecast" element={<MovieCast />} />
+            <Route path="moviereviews" element={<MovieReviews />} />
+          </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
@@ -20,7 +28,3 @@ function App() {
 }
 
 export default App;
-///
-//API  21ba5c9b0124eaafcb5abd44162bbdbe
-//eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMWJhNWM5YjAxMjRlYWFmY2I1YWJkNDQxNjJiYmRiZSIsIm5iZiI6MTc0NDkxMTg0MC4zMzUsInN1YiI6IjY4MDEzZGUwZTQ3NTM0MjVlZmFkMGQ5YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Jh6pnNVvXOZHuW0a7kZDYo7ZFiFijd0fTYAJpcuk4QY
-///
