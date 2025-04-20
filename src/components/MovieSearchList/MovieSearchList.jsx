@@ -1,12 +1,12 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 
-const MovieSearchList = () => {
+const MovieSearchList = ({ handleSubmitMavies }) => {
   const initialValues = {
     query: "",
   };
   const handleSubmit = (values) => {
-    console.log(values);
+    handleSubmitMavies(values.query);
   };
   return (
     <div>

@@ -27,7 +27,7 @@ const MovieDetailsPage = () => {
         <p>Additional information</p>
         <nav>
           <NavLink to="moviecast"> Movie Cast</NavLink>
-          <NavLink to="moviereviews"> Movie Revies</NavLink>
+          <NavLink to="moviereviews"> Movie Reviews</NavLink>
         </nav>
         <hr />
         <Outlet />

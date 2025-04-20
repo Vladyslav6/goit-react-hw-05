@@ -21,9 +21,6 @@ const MovieCast = () => {
 
   return (
     <div>
-      {/* {cast.map((item) => (
-        <p>{item.name}</p>
-      ))} */}
       <ul>
         {cast.map((item) => (
           <li key={item.id}>{item.name}</li>
