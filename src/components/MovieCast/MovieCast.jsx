@@ -32,10 +32,3 @@ const MovieCast = () => {
 };
 
 export default MovieCast;
-{/* <ul className={css.cards}>
-{sendPhoto.map((item) => (
-  <li key={item.id}>
-    <ImageCard sendItem={item} handleClick={handleClick} />
-  </li>
-))}
-</ul> */}
