@@ -30,7 +30,7 @@ const MoviesPage = () => {
 
     getData();
   }, [query]);
-  console.log(searchMovies);
+
   return (
     <div>
       <MovieSearchList handleSubmitMavies={handleSubmitMavies} />
