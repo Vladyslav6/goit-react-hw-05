@@ -1,5 +1,6 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
+import css from "./MovieSearchList.module.css";
 
 const MovieSearchList = ({ handleSubmitMavies }) => {
   const initialValues = {
@@ -9,7 +10,7 @@ const MovieSearchList = ({ handleSubmitMavies }) => {
     handleSubmitMavies(values.query);
   };
   return (
-    <div>
+    <div className={css.serchBox}>
       <Formik onSubmit={handleSubmit} initialValues={initialValues}>
         <Form>
           <Field name="query" />

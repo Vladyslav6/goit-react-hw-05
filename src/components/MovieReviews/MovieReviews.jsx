@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fetchReviewsById } from "../../services/api";
 
 const MovieReviews = () => {
@@ -20,7 +20,9 @@ const MovieReviews = () => {
   return (
     <ul>
       {reviews.map((item) => (
-        <li key={item.id}>{item.author}</li>
+        <Link to={item.url} key={item.id}>
+          <li key={item.id}>{item.author}</li>
+        </Link>
       ))}
     </ul>
   );

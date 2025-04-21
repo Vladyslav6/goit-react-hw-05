@@ -1,0 +1,15 @@
+.flexBox {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.listBox {
+  list-style: none;
+}
+.SpecificationActor {
+  display: flex;
+  flex-direction: column;
+}

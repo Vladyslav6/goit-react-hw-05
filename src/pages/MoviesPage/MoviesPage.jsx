@@ -2,21 +2,27 @@ import MovieSearchList from "../../components/MovieSearchList/MovieSearchList";
 
 import { useEffect, useState } from "react";
 import { fetchSerchMovies } from "../../services/api";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
+import MovieList from "../../components/MovieList/MovieList";
 
 const MoviesPage = () => {
-  const [serchMovies, setSerchMovies] = useState([]);
-  const [query, setQuery] = useState("");
+  const [searchMovies, setSearchMovies] = useState([]);
+  const [seachParams, setSearchParams] = useSearchParams();
+
+  const query = seachParams.get("query") ?? "";
 
   const handleSubmitMavies = (newValue) => {
-    setQuery(newValue);
+    seachParams.set("query", newValue);
+    setSearchParams(seachParams);
   };
+
   useEffect(() => {
     if (!query) return;
 
     const getData = async () => {
       try {
         const data = await fetchSerchMovies(query);
-        setSerchMovies(data);
+        setSearchMovies(data);
       } catch (error) {
         console.log(error);
       }
@@ -24,16 +30,11 @@ const MoviesPage = () => {
 
     getData();
   }, [query]);
-  console.log(serchMovies);
-
+  console.log(searchMovies);
   return (
     <div>
       <MovieSearchList handleSubmitMavies={handleSubmitMavies} />
-      <ul>
-        {serchMovies.map((item) => (
-          <li key={item.id}>{item.original_title}</li>
-        ))}
-      </ul>
+      <MovieList trendFilm={searchMovies} />
     </div>
   );
 };

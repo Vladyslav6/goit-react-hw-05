@@ -1,0 +1,27 @@
+.wrapperBox {
+  border: solid 1px #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.listWrapper {
+  /* width: 500px; */
+  list-style: none;
+}
+.ulWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  align-content: space-between;
+  gap: 10px;
+}
+/* overflow: hidden; */
+.spanWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.LinkStyle {
+  text-decoration: none;
+  color: #000;
+  font-weight: bolder;
+}
